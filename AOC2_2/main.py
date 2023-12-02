@@ -26,7 +26,6 @@ for line in input:
             #find number
             color_amount = int("".join(re.findall("\d", color)))
 
-            # check against max of r/g/b
             if color.find("blue") > -1:
                 if color_amount > max_blue:
                     max_blue = color_amount
@@ -36,8 +35,6 @@ for line in input:
             elif color.find("green") > -1:
                 if color_amount > max_green:
                     max_green = color_amount
-
-        # if > max -> line_is_gud auf False setzen
 
     power = max_red*max_blue*max_green
     sum_of_powers += power
